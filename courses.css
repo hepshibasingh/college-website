@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5e6;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  /* Header */
+  header {
+    background-color: #ff6200;
+    color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  /* Search Box */
+#searchBox { 
+  width: 60%; 
+  padding: 10px; 
+  margin-top: 10px; 
+  border: none; 
+  border-radius: 5px; 
+}
+
+  /* Filter Buttons */
+  .course-categories {
+    margin-top: 28px;
+  }
+  .filter-btn {
+    background-color: #ff6200;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .filter-btn:hover {
+    background-color: #e65c00;
+  }
+  
+  /* Course Grid */
+  #courses-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  /* Course Card */
+  .course-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .course-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Pagination */
+  .pagination {
+    margin-bottom: 30px;
+  }
+  .pagination button {
+    background-color: #ff6200;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+/* Back to Home Button */
+.back-to-home {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  background-color: #ff6200; /* Orange theme */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.back-to-home:hover {
+  background-color: #e65c00; /* Darker orange */
+}

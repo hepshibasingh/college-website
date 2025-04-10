@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Top Abroad Colleges - Edu College</title>
+  <link rel="stylesheet" href="responsive.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff5e6;
+      text-align: center;
+    }
+
+    .back-to-home {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 10px 15px;
+      background-color: #e67e22;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .back-to-home:hover {
+      background-color: #d35400;
+    }
+
+    header {
+      background-color: #ff6200;
+      color: white;
+      padding: 25px 20px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .colleges-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 20px;
+    }
+
+    .college-box {
+      width: 280px;
+      padding: 20px;
+      background: white;
+      border: 2px solid #e67e22;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: left;
+      transition: 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
+    }
+
+    .college-box h3 {
+      color: #e67e22;
+      margin-bottom: 10px;
+    }
+
+    .college-box:hover {
+      transform: scale(1.05);
+    }
+
+    .cta {
+      background: #fff3e0;
+      padding: 30px 20px;
+      margin-top: 30px;
+    }
+
+    .cta h2 {
+      color: #e67e22;
+      margin-bottom: 20px;
+    }
+
+    .cta-btn {
+      padding: 12px 24px;
+      background: #d35400;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: #e67e22;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="colleges.html" class="back-to-home">Back</a>
+  <h1>Top Abroad Colleges</h1>
+</header>
+
+<section id="collegesContainer" class="colleges-grid">
+  <!-- JavaScript will populate content -->
+</section>
+
+<section class="cta">
+  <h2>Study Globally. Apply to Your Dream College Abroad!</h2>
+  <a href="register.html" class="cta-btn">Apply Now</a>
+</section>
+
+<script>
+  const colleges = [
+    {
+      name: "Harvard University",
+      location: "USA",
+      ranking: "#1",
+      fees: "USD 51,000/year",
+      courses: "Business, Law, Medicine, Engineering",
+      website: "https://www.harvard.edu"
+    },
+    {
+      name: "University of Oxford",
+      location: "UK",
+      ranking: "#2",
+      fees: "GBP 36,000/year",
+      courses: "Law, Humanities, Science, AI",
+      website: "https://www.ox.ac.uk"
+    },
+    {
+      name: "University of Toronto",
+      location: "Canada",
+      ranking: "#3",
+      fees: "CAD 45,000/year",
+      courses: "Engineering, Science, Management",
+      website: "https://www.utoronto.ca"
+    },
+    {
+      name: "University of Melbourne",
+      location: "Australia",
+      ranking: "#4",
+      fees: "AUD 42,000/year",
+      courses: "Health, Teaching, IT, Design",
+      website: "https://www.unimelb.edu.au"
+    },
+    {
+      name: "ETH Zurich",
+      location: "Switzerland",
+      ranking: "#5",
+      fees: "CHF 1,300/year",
+      courses: "Engineering, Technology, Physics",
+      website: "https://ethz.ch"
+    }
+  ];
+
+  const container = document.getElementById("collegesContainer");
+
+  colleges.forEach(college => {
+    const link = document.createElement("a");
+    link.href = college.website;
+    link.target = "_blank";
+    link.className = "college-box";
+
+    link.innerHTML = `
+      <h3>${college.name}</h3>
+      <p><strong>Location:</strong> ${college.location}</p>
+      <p><strong>Ranking:</strong> ${college.ranking}</p>
+      <p><strong>Fees:</strong> ${college.fees}</p>
+      <p><strong>Courses:</strong> ${college.courses}</p>
+    `;
+
+    container.appendChild(link);
+  });
+</script>
+
+</body>
+</html>

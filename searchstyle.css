@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.search-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff8c00;
+    padding: 15px;
+    position: relative;
+}
+
+.back-button {
+    position: absolute;
+    left: 20px;
+    background: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.back-button:hover {
+    background: #ffd27f;
+}
+
+.site-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.search-container {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 500px;
+    border: 2px solid #ff8c00;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+.search-box button {
+    background: #ff8c00;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.courses-container, .exams-container {
+    text-align: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    gap: 15px;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+/* Scrollable Hoverboard */
+.scroll-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+.hoverboard {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    width: 80%;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide Scrollbar */
+.hoverboard::-webkit-scrollbar {
+    display: none;
+}
+
+/* Course & Exam Items */
+.course-item, .college-item, .exam-item {
+    display: inline-block;
+    min-width: 150px;
+    margin: 10px;
+    padding: 15px;
+    background: #ff6600;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.course-item:hover, .college-item:hover, .exam-item:hover {
+    transform: scale(1.1);
+    background: #ff9900;
+}
+
+/* Navigation Buttons */
+.scroll-btn {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.scroll-btn:hover {
+    background-color: #ff9900;
+    transform: scale(1.1);
+}
+/* View More Button Styles */
+.view-more-btn {
+    display: block;
+    width: fit-content;
+    margin: 15px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg, #ff7700, #ff5500);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(255, 119, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.view-more-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #ff5500, #ff3300);
+    box-shadow: 0px 6px 15px rgba(255, 85, 0, 0.5);
+}
+
+.view-more-btn:active {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #ff3300, #ff1100);
+}

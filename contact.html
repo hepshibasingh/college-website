@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Edu College</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script defer src="contact.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <button class="back-home" onclick="location.href='index.html'">Back to Home</button>
+    </header>
+<section class="contact-container">
+    <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>Have questions? We'd love to hear from you!</p>
+        <p><strong>Email:</strong> singhhepshiba@gmail.com</p>
+        <p><strong>Phone:</strong> +91 77488 34399</p>
+        <p><strong>Address:</strong>Mandsaur, M.P., India</p>
+    </div>
+    
+    <div class="contact-form">
+        <h2>Send a Message</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="formMessage" class="hidden">Your message has been sent successfully!</p>
+    </div>
+</section>
+</body>
+</html>

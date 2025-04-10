@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exams Information | Edu College</title>
+    <link rel="stylesheet" href="exams.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-to-home">Back to Home</a>
+        <h1>All India Exams Information</h1>
+        <input type="text" id="searchBox" placeholder="Search for an exam...">
+    </header>
+    <section class="exam-categories">
+    <button class="filter-btn" onclick="filterExams('all')">All</button>
+    <button class="filter-btn" data-filter="engineering" onclick="location.href='engineering.html'">Engineering</button>
+    <button class="filter-btn" data-filter="medical" onclick="location.href='medical.html'">Medical</button>
+    <button class="filter-btn" data-filter="management" onclick="location.href='management.html'">Management</button>
+    <button class="filter-btn gov-btn" data-filter="government" onclick="location.href='government.html'">Government</button>
+    <button class="filter-btn" data-filter="Law Entrance Exams" onclick="location.href='law.html'">Law Entrance Exams</button>
+    <button class="filter-btn" data-filter="Defense And Police Exmas" onclick="location.href='police.html'">Defense And Police Exmas</button>
+    <button class="filter-btn" data-filter="Teaching And Education Exams" onclick="location.href='edu.html'">Teaching And Education Exams</button>
+    <button class="filter-btn" data-filter="Study Abroad Entance Exams" onclick="location.href='abroad.html'">Study Abroad Entance Exams</button>
+    <button class="filter-btn" data-filter="Commerce And Finance Exams" onclick="location.href='commerce.html'">Commerce And Finance Exams</button>
+</section>
+<section id="examList">
+    <div class="exam-card" data-category="engineering">
+        <h2>JEE Main</h2>
+        <p><strong>Eligibility:</strong> 12th Pass</p>
+        <p><strong>Exam Date:</strong> April 2025</p>
+        <button class="details-btn">View Details</button>
+    </div>
+    <div class="exam-card" data-category="engineering">
+        <h2>BITS Admission Test (BITSAT)</h2>
+        <p><strong>Eligibility:</strong> 12th Pass</p>
+        <p><strong>Aggregate:</strong>75%</p>
+        <p><strong>Exam Date:</strong> May 2025</p>
+        <button class="details-btn">View Details</button>
+    </div>
+    <div class="exam-card" data-category="medical">
+        <h2>NEET</h2>
+        <p><strong>Eligibility:</strong> 12th (PCB)</p>
+        <p><strong>Exam Date:</strong> May 2025</p>
+        <button class="details-btn">View Details</button>
+    </div>
+    <div class="exam-card" data-category="engineering">
+        <h2>International English Language Testing System for global education (IELTS)</h2>
+        <p><strong>Eligibility:</strong> 16 years+ </p>
+        <p><strong>Aggregate:</strong>60%-70%</p>
+        <p><strong>Exam Date:</strong> April, May, June</p>
+        <button class="details-btn">View Details</button>
+    </div>
+    <div class="exam-card" data-category="engineering">
+        <h2>Chartered Accountant examination conducted by ICAI (CA)</h2>
+        <p><strong>Eligibility:</strong> 12th </p>
+        <p><strong>Aggregate:</strong>50%</p>
+        <p><strong>Exam Date:</strong> May, November</p>
+        <button class="details-btn">View Details</button>
+    </div>
+    <div class="exam-card" data-category="engineering">
+        <h2>National Eligibility Test for lectureship and research fellowships(NET)</h2>
+        <p><strong>Eligibility:</strong> Master's dergree- 55% </p>
+        <p><strong>Aggregate:</strong>40%</p>
+        <p><strong>Exam Date:</strong>June, December</p>
+        <button class="details-btn">View Details</button>
+    </div>
+    <div class="exam-card" data-category="engineering">
+        <h2>Central Teacher Eligibility Test for teaching positions in schools (CTET)</h2>
+        <p><strong>Eligibility:</strong> 50%</p>
+        <p><strong>Aggregate:</strong>60%</p>
+        <p><strong>Exam Date:</strong>July, December</p>
+        <button class="details-btn">View Details</button>
+    </div>
+    <div class="exam-card" data-category="engineering">
+        <h2>National Defence Academy & Naval Academy Exam for officer training. (UPSC)</h2>
+        <p><strong>Eligibility:</strong> Age between 21 - 32</p>
+        <p><strong>Exam Date:</strong>June, september</p>
+        <button class="details-btn">View Details</button>
+    </div>
+    <div class="exam-card" data-category="engineering">
+        <h2>Common Admission Test for IIMs and other top B-schools (CAT)</h2>
+        <p><strong>Eligibility:</strong>50%</p>
+        <p><strong>Exam Date:</strong>Novmber</p>
+        <button class="details-btn">View Details</button>
+    </div>
+</section>
+
+<script src="exams.js"></script>
+
+</body>
+</html>

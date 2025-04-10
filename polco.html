@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Defense & Police Courses - Edu College</title>
+  <link rel="stylesheet" href="responsive.css">
+  <style>
+   body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff5e6;
+  text-align: center;
+}
+
+.back-to-home {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  background-color: #e67e22;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.back-to-home:hover {
+  background-color: #d35400;
+}
+
+header {
+  background-color: #ff6200;
+  color: white;
+  padding: 25px 20px 20px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.courses-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 20px;
+}
+
+.course-box {
+  width: 280px;
+  padding: 20px;
+  background: white;
+  border: 2px solid #e67e22;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.course-box h3 {
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+.course-box:hover {
+  transform: scale(1.05);
+}
+
+.pagination-buttons {
+  margin: 20px;
+}
+
+.pagination-buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-weight: bold;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination-buttons button:disabled {
+  background-color: #f5cba7;
+  cursor: not-allowed;
+}
+
+.pagination-buttons button:hover:enabled {
+  background-color: #d35400;
+}
+
+.cta {
+  background: #fff3e0;
+  padding: 30px 20px;
+  margin-top: 30px;
+}
+
+.cta h2 {
+  color: #e67e22;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  padding: 12px 24px;
+  background: #d35400;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #e67e22;
+}
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="courses.html" class="back-to-home" id="backToHome">Back</a>
+  <h1>Defense & Police Courses</h1>
+</header>
+
+<section id="courses-grid" class="courses-grid">
+  <!-- Courses populated via JS -->
+</section>
+
+<div class="pagination-buttons">
+  <button id="prev-course-btn" onclick="prevCoursePage()">Previous</button>
+  <button id="next-course-btn" onclick="nextCoursePage()">Next</button>
+</div>
+
+<section class="cta">
+  <h2>Defend the Nation, Serve with Honor!</h2>
+  <a href="register.html" class="cta-btn">Register Now</a>
+</section>
+
+<script>
+  let coursePage = 0;
+  const coursesPerPage = 4;
+
+  const courses = [
+    { name: "B.Sc. in Defense Studies", duration: "3 years", fees: "₹10K–50K/year", branches: "Military Science, Strategic Studies", info: "Covers defense strategies, military tactics, and national security policies." },
+    { name: "BA in Police Administration", duration: "3 years", fees: "₹5K–40K/year", branches: "Criminal Justice, Policing, Criminology", info: "Prepares candidates for police services, law enforcement, and crime control careers." },
+    { name: "Diploma in Military Studies", duration: "1 year", fees: "₹10K–30K", branches: "Defense Policy, War Strategy", info: "Offers knowledge about military structure, defense strategies, and leadership in armed forces." },
+    { name: "Certificate in Disaster & Crisis Management", duration: "6 months", fees: "₹5K–20K", branches: "Crisis Response, Risk Mitigation", info: "Focuses on crisis response skills essential for police and military personnel." },
+    { name: "NDA (National Defence Academy) Preparation Course", duration: "1 year", fees: "₹20K–80K", branches: "Maths, General Ability Test", info: "Coaching program to crack NDA entrance exam conducted by UPSC." },
+    { name: "CDS (Combined Defence Services) Coaching", duration: "6 months–1 year", fees: "₹25K–90K", branches: "English, GK, Mathematics", info: "Prepares for CDS exam for entry into IMA, OTA, AFA, and INA." },
+    { name: "Police Entrance Exam Coaching", duration: "6 months", fees: "₹10K–60K", branches: "Reasoning, Aptitude, Constitution", info: "Coaching for state police services, constable and sub-inspector recruitment exams." },
+    { name: "B.Sc. in Forensic Science", duration: "3 years", fees: "₹20K–1L/year", branches: "Crime Scene, Fingerprinting, Toxicology", info: "Helps in investigation roles within police forces and crime labs." }
+  ];
+
+  function showCourses() {
+    const courseContainer = document.getElementById("courses-grid");
+    courseContainer.innerHTML = "";
+
+    let start = coursePage * coursesPerPage;
+    let end = start + coursesPerPage;
+    let displayed = courses.slice(start, end);
+
+    displayed.forEach(course => {
+      const div = document.createElement("div");
+      div.className = "course-box";
+      div.setAttribute("data-info", course.info);
+      div.onclick = function () { speakText(this); };
+      div.innerHTML = `
+        <h3>${course.name}</h3>
+        <p><strong>Duration:</strong> ${course.duration}</p>
+        <p><strong>Branches:</strong> ${course.branches}</p>
+        <p><strong>Fees:</strong> ${course.fees}</p>
+      `;
+      courseContainer.appendChild(div);
+    });
+
+    updateCourseButtons();
+  }
+
+  function nextCoursePage() {
+    if ((coursePage + 1) * coursesPerPage < courses.length) {
+      coursePage++;
+      showCourses();
+    }
+  }
+
+  function prevCoursePage() {
+    if (coursePage > 0) {
+      coursePage--;
+      showCourses();
+    }
+  }
+
+  function updateCourseButtons() {
+    document.getElementById("prev-course-btn").disabled = coursePage === 0;
+    document.getElementById("next-course-btn").disabled = (coursePage + 1) * coursesPerPage >= courses.length;
+  }
+
+  function speakText(element) {
+    const text = element.getAttribute("data-info");
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.lang = "en-US";
+    speech.rate = 1;
+    speechSynthesis.speak(speech);
+  }
+
+  document.addEventListener("DOMContentLoaded", showCourses);
+  document.getElementById("backToHome").addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.href = "courses.html";
+  });
+</script>
+
+</body>
+</html>

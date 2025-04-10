@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - College Explorer</title>
+    <link rel="stylesheet" href="regstyle.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="logo">EDU College</div>
+        <nav class="nav-links">
+            <a href="index.html" class="back-home-btn">Back to Home</a>
+        </nav>
+    </header>
+
+    <!-- Registration Form -->
+    <div class="container">
+        <div class="form-box">
+            <h2>Register Now</h2>
+            <div class="progress-bar">
+                <div class="step active">1</div>
+                <div class="step">2</div>
+                <div class="step">3</div>
+            </div>
+
+            <form id="regForm">
+                <!-- Step 1 -->
+                <div class="form-step active">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your name">
+                    
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email">
+                    
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="form-step">
+                    <label>Preferred Course</label>
+<select id="course-select">
+    <option value="" disabled selected>Select your course</option>
+    <option value="Engineering">Engineering</option>
+    <option value="Medicine">Medicine</option>
+    <option value="Law">Law</option>
+    <option value="Arts">Arts</option>
+    <option value="Science">Science</option>
+    <option value="Commerce">Commerce</option>
+    <option value="Management">Management</option>
+</select>
+    
+                    <label>College Choice</label>
+                    <select id="college-select">
+                        <option value="" disabled selected>Select your college</option>
+                        <option value="IIT Bombay">IIT Bombay</option>
+                        <option value="IIT Delhi">IIT Delhi</option>
+                        <option value="IIM Ahmedabad">IIM Ahmedabad</option>
+                        <option value="AIIMS Delhi">AIIMS Delhi</option>
+                        <option value="JNU">Jawaharlal Nehru University (JNU)</option>
+                        <option value="Delhi University">Delhi University</option>
+                        <option value="BITS Pilani">BITS Pilani</option>
+                    </select>
+                    <button type="button" class="prev-btn">Back</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+                <!-- Step 3 -->
+                <div class="form-step">
+                    <label>Password</label>
+                    <input type="password" placeholder="Create a password">
+                    
+                    <label>Confirm Password</label>
+                    <input type="password" placeholder="Confirm your password">
+                    
+                    <button type="button" class="prev-btn">Back</button>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>

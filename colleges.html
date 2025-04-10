@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colleges</title>
+    <link rel="stylesheet" href="college.css">
+    <link rel="stylesheet" href="responsive.css">
+    <!-- JavaScript -->
+    <script src="college.js"></script>
+</head>
+<body>
+   <!-- Header Section -->
+<header>
+    <a href="index.html" class="back-to-home">Back to Home</a>
+    <h1>EDU College</h1>
+    <input type="text" id="searchBox" placeholder="Search for college...">
+    <div style="width: 120px;"></div> <!-- empty space to balance layout -->
+  </header>
+  
+  <!-- College Categories Section -->
+  <section class="exam-categories">
+    <h2 style="text-align: center; margin-top: 30px;">Explore College Categories</h2>
+    <div style="text-align: center; margin-top: 15px;">
+        <button class="filter-btn">All</button>
+      <button class="filter-btn"data-filter="engineering" onclick="location.href='engclg.html'">Engineering Colleges</button>
+      <button class="filter-btn"data-filter="Medical" onclick="location.href='medclg.html'">Medical Colleges</button>
+      <button class="filter-btn"data-filter="Management" onclick="location.href='manclg.html'">Management Colleges</button>
+      <button class="filter-btn"data-filter="Government " onclick="location.href='govclg.html'">Government Colleges</button>
+      <button class="filter-btn"data-filter="Law " onclick="location.href='lawclg.html'">Law Colleges</button>
+      <button class="filter-btn"data-filter="Defense And Police" onclick="location.href='defclg.html'">Defense And Police Colleges</button>
+      <button class="filter-btn"data-filter="Teaching And Education" onclick="location.href='educlg.html'">Teaching And Education Colleges</button>
+      <button class="filter-btn"data-filter="Abroad" onclick="location.href='abrclg.html'">Abroad Colleges</button>
+      <button class="filter-btn"data-filter="Commerce And Finance " onclick="location.href='comclg.html'">Commerce And Finance Colleges</button>
+    </div>
+  </section>
+<section class="colleges-container">
+    <h2>Top Colleges in India</h2>
+    
+    <!-- Colleges Grid -->
+    <div id="colleges-grid" class="colleges-grid"></div>
+
+    <!-- Pagination Controls -->
+    <div class="pagination-controls">
+        <button id="prev-college-btn" onclick="prevCollegePage()">❮ Previous</button>
+        <button id="next-college-btn" onclick="nextCollegePage()">Next ❯</button>
+    </div>
+</section>
+</body>
+</html>

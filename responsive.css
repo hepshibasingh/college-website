@@ -1,0 +1,27 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Tablet View */
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    .navbar {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  /* Mobile View */
+  @media screen and (max-width: 480px) {
+    .header {
+      font-size: 1.2rem;
+    }
+    .box {
+      width: 100%;
+    }
+  }

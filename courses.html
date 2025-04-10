@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Courses in India</title>
+  <link rel="stylesheet" href="courses.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="back-to-home" id="backToHome">←Back To Home</a>
+    <h1>Explore Courses in India</h1>
+     <input type="text" id="searchBox" placeholder="Search for an exam...">
+  </header>
+  <div class="course-categories">
+    <button class="filter-btn" onclick="filterExams('all')">All</button>
+    <button class="filter-btn" data-filter="engineering" onclick="location.href='engco.html'">Engineering</button>
+    <button class="filter-btn" data-filter="medical" onclick="location.href='medco.html'">Medical</button>
+    <button class="filter-btn" data-filter="management" onclick="location.href='manco.html'">Management</button>
+    <button class="filter-btn gov-btn" data-filter="government" onclick="location.href='govco.html'">Government</button>
+    <button class="filter-btn" data-filter="Law Entrance Exams" onclick="location.href='lawco.html'">Law Entrance Exams</button>
+    <button class="filter-btn" data-filter="Defense And Police Exmas" onclick="location.href='polco.html'">Defense And Police Exmas</button>
+    <button class="filter-btn" data-filter="Teaching And Education Exams" onclick="location.href='educo.html'">Teaching And Education Exams</button>
+    <button class="filter-btn" data-filter="Study Abroad Entance Exams" onclick="location.href='abrco.html'">Study Abroad Entance Exams</button>
+    <button class="filter-btn" data-filter="Commerce And Finance Exams" onclick="location.href='comco.html'">Commerce And Finance Exams</button>
+  </div>
+  <div id="courses-grid"></div>
+
+  <div class="pagination">
+    <button onclick="prevCoursePage()" id="prev-course-btn">Prev</button>
+    <button onclick="nextCoursePage()" id="next-course-btn">Next</button>
+  </div>
+
+  <script src="courses.js"></script>
+</body>
+</html>

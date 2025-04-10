@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Colleges - EduCollege</title>
+    <link rel="stylesheet" href="searchstyle.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header class="search-header">
+        <button class="back-button" onclick="history.back()">&#8592; Back</button>
+        <h1 class="site-title">EduCollege</h1>
+      
+    </header>
+    <section class="search-container">
+        <h2>Find Your College</h2>
+        <div class="search-box">
+            <input type="text" placeholder="Search colleges, courses..." />
+            <button>🔍</button>
+        </div>
+    </section>
+    <h2>Popular Colleges in India</h2>
+    <div class="scroll-container">
+        <button class="scroll-btn left" onclick="scrollLeft('college-hoverboard')">&#10094;</button>
+        <div class="hoverboard" id="college-hoverboard">
+            <a href="engclg.html" class="college-item">Engineering</a>
+            <a href="medclg.html"class="college-item">Medical</a>
+            <a href="manclg.html"class="college-item">Management</a>
+            <a href="comclg.html" class="college-item">Commerce</a>
+            <a href="defclg.html" class="college-item">Defense</a> 
+            <a href="educlg.html" class="college-item">Teaching</a>
+            <a href="govclg.html" class="college-item">Government</a>
+            <a href="lawclg.html" class="college-item">Law</a>
+            <a href="abrclg.html" class="college-item">Abroad</a>
+        </div>
+        <button class="scroll-btn right" onclick="scrollRight('college-hoverboard')">&#10095;</button>
+    </div>
+    <a href="colleges.html" class="view-more-btn">View More</a>
+</section>
+   <!-- Popular Courses Section -->
+<section class="courses-section">
+    <h2>Popular Courses in India</h2>
+    <div class="scroll-container">
+        <button class="scroll-btn left" onclick="scrollLeft('courses-hoverboard')">&#10094;</button>
+        <div class="hoverboard" id="courses-hoverboard">
+            <a href="engco.html" class="course-item">B.Tech</a>
+            <a href="manco.html" class="course-item">MBA</a>
+            <a href="medco.html" class="course-item">B.Sc</a>
+            <a href="engco.html" class="course-item">M.Tech</a>
+            <a href="manco.html" class="course-item">BBA</a>
+            <a href="abrco.html" class="course-item">MBBS Abroad</a>
+            <a href="comco.html" class="course-item">B.Com</a>
+            <a href="medco.html" class="course-item">MBBS</a>
+            <a href="lawco.html" class="course-item">LLB</a>
+            <a href="educo.html" class="course-item">B.ed</a>
+        </div>
+        <button class="scroll-btn right" onclick="scrollRight('courses-hoverboard')">&#10095;</button>
+    </div>
+    <a href="courses.html" class="view-more-btn">View More</a>
+</section>
+
+<!-- Competitive Exams Section -->
+<section class="exams-section">
+    <h2>Competitive Exams</h2>
+    <div class="scroll-container">
+        <button class="scroll-btn left" onclick="scrollLeft('exams-hoverboard')">&#10094;</button>
+        <div class="hoverboard" id="exams-hoverboard">
+            <a href="jee.html" class="exam-item">JEE</a>
+            <a href="neet.html" class="exam-item">NEET</a>
+            <a href="cat.html" class="exam-item">CAT</a>
+            <a href="gate.html" class="exam-item">GATE</a>
+            <a href="upsc.html" class="exam-item">UPSC</a>
+            <a href="ssc-cgl.html" class="exam-item">SSC CGL</a>
+            <a href="nda.html" class="exam-item">NDA</a>
+            <a href="ibps-po.html" class="exam-item">IBPS PO</a>
+            <a href="clat.html" class="exam-item">CLAT</a>
+            <a href="xat.html" class="exam-item">XAT</a>
+        </div>
+        <button class="scroll-btn right" onclick="scrollRight('exams-hoverboard')">&#10095;</button>
+    </div>
+    <a href="exams.html" class="view-more-btn">View More</a>
+</section>
+    
+    <script src="search.js"></script>
+</body>
+</html>

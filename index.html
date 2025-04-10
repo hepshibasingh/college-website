@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDU College</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <h1>EDU College</h1>
+ <!-- Menu Toggle Button (Hamburger Icon) -->
+ <div class="menu-icon" onclick="toggleMenu()">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</div>
+        <div class="search-icon" onclick="openSearch()">&#128269;</div>  <!-- Search Icon -->
+        <div class="user-icon" onclick="openAccount()">&#128100;</div>  <!-- User Account Icon -->
+ 
+<!-- Sidebar Menu -->
+<div id="menu-bar">
+    <div class="menu-header">
+        <span>EduCollege</span>
+        <span class="close-btn" onclick="toggleMenu()">×</span>
+    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="colleges.html">Colleges</a></li>
+        <li><a href="exams.html">Exams</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="explore-now">
+        <p>Choosing the right college is an important decision, and we make it easier for you! 
+            Our platform helps you explore top colleges, compare courses, check faculty details, understand fee structures, and find the best match for your career goals—all in one place.
+         </p>
+         <h2>Find Your Dream College in Just a Few Clicks!</h2>
+         
+        <button onclick="scrollToFeatures()">Explore Now</button>
+        <h2>Explore Top Colleges & Courses 
+             - Your Future Starts Here!</h2>
+    </section>
+    </div>
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <a href="search.html"
+        class="hoverboard-box">
+        <div class="feature-box">
+            <h3>Search Colleges</h3>
+            <p>Find detailed information about colleges across India.</p>
+        </div>
+        <div class="image-container">
+            <img src="data:image/jpeg;base64,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" alt="Search image">
+        </div>
+        </a>
+        <a href="register.html"
+        class="hoverboard-box">
+        <div class="feature-box">
+            <h3>Easy Registration</h3>
+            <p>Apply for admissions with a simple registration process.</p>
+        </div>
+        <div class="image-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV3GV3G6IX2DY2snTELTmJL_gakq9Wpn8I438BPBLybYADzk4Y3SOzYQI6-JVg_1j_THk&usqp=CAU" alt="course image">
+        </div>
+        </a>
+        <a href="courses.html"
+        class="hoverboard-box">
+        <div class="feature-box">
+            <h3>Compare Courses</h3>
+            <p>Compare different courses and make the best decision.</p>
+        </div>
+        <div class="image-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1En_1TeH-DMc3RO62yNMb9V9_7M0myrs2EA&s" alt="course image">
+        </div>
+        </a>
+    </section>
+    <!-- Registration Section -->
+<section class="register-section">
+    <h2>Want to Join a College?</h2>
+    <h2>Take the First Step Toward Your Future!</h2>
+    <p>Create your profile, select your preferred courses, and get personalized recommendations. Don’t wait—start your college journey today!
+    </p>
+    <a href="register.html" class="register-button">Register Now</a>
+</section>
+
+<!-- Course Preview Section -->
+<section class="course-preview">
+    <h2>Discover Courses That Match Your Passion!</h2>
+    <p>From professional degrees to short-term certifications, we cover a wide range of courses to help you build the perfect career path. 
+        Hover over a course to see details and find the one that fits your ambitions</p>
+    <div class="course-list">
+        <div class="course-card">
+            <h3>Computer Science</h3>
+            <p>Duration: 4 Years</p>
+        </div>
+        <div class="course-card">
+            <h3>Business Administration</h3>
+            <p>Duration: 3 Years</p>
+        </div>
+        <div class="course-card">
+            <h3>Mechanical Engineering</h3>
+            <p>Duration: 4 Years</p>
+        </div>
+    </div>
+    <a href="courses.html" class="view-more">View More</a>
+</section>
+<section class="college-preview">
+    <h2>Top Colleges, Just for You!</h2>
+    <p>
+      We bring you a curated list of top colleges, handpicked based on rankings, faculty, infrastructure, and student reviews. Click ‘View More’ to explore a complete list of colleges that suit your preferences.
+    </p>
+  
+    <div class="college-list">
+      <a href="https://www.iitd.ac.in" class="college-card" target="_blank">
+        <h3>IIT Delhi</h3>
+        <p>Location: New Delhi</p>
+      </a>
+  
+      <a href="https://www.aiims.edu" class="college-card" target="_blank">
+        <h3>AIIMS Delhi</h3>
+        <p>Location: New Delhi</p>
+      </a>
+  
+      <a href="https://www.iimahd.ernet.in" class="college-card" target="_blank">
+        <h3>IIM Ahmedabad</h3>
+        <p>Location: Ahmedabad</p>
+      </a>
+    </div>
+  
+    <a href="colleges.html" class="view-more">View More</a>
+  </section>
+    <section id="upcomingExams" class="homepage-section">
+        <h2>Upcoming Exams</h2>
+        <div class="exam-preview">
+            <div class="exam-item">
+                <h3><a href="https://jeemain.nta.ac.in/" target="_blank">JEE Main</a></h3>
+                <p>April 2025</p>
+            </div>
+            <div class="exam-item">
+                <h3><a href="https://neet.nta.nic.in/" target="_blank">NEET</a></h3>
+                <p>May 2025</p>
+            </div>
+            <div class="exam-item">
+                <h3><a href="https://iimcat.ac.in/" target="_blank">CAT</a></h3>
+                <p>November 2025</p>
+            </div>
+        </div>
+        <a href="exams.html" class="view-all-btn">View All Exams</a>
+    </section>
+    <!-- Contact Us Section -->
+<section class="homepage-contact">
+    <h2>Contact Us</h2>
+    <p>Have questions? We're here to help! Reach out anytime.</p>
+
+    <div class="contact-details">
+        <p>📍 Address: Mandsaur, M.P. </p>
+        <p>📧 Email: <a href="singhhepshiba@gmail.com">singhhepshiba@gmail.com</a></p>
+        <p>📞 Phone: +91 77488 34399</p>
+    </div>
+
+    <a href="contact.html" class="contact-btn">Get in Touch</a>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+    </div>
+</section>
+    <!-- JavaScript -->
+    <script src="index.js"></script>
+</body>
+</html>

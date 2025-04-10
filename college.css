@@ -1,0 +1,179 @@
+/* Header Styling */
+header {
+    background-color: #ff6200; /* Orange theme */
+    color: white; 
+    padding: 20px; 
+}
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: #fff5e6; /* Light orange background */
+    margin: 0; 
+    padding: 0; 
+    text-align: center; 
+}
+/* Back to Home Button */
+.back-to-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: white;
+    color: #ff6200;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.back-to-home:hover {
+    background-color: #ffe0cc;
+}
+
+/* Edu College Heading */
+header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Search Box - Positioned Immediately Below Heading */
+#searchBox {
+    width: 60%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 15px;
+    outline: none;
+}
+
+/* College Branches Section */
+.college-branches {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffebcc; /* Light Orange */
+    border-bottom: 3px solid #ff8800;
+}
+
+.college-branches h2 {
+    font-size: 24px;
+    color: #cc5500;
+    margin-bottom: 15px;
+}
+
+.branches-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.branch-box {
+    padding: 15px 25px;
+    background-color: #ff8800;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.branch-box:hover {
+    background-color: #cc5500;
+}
+
+/* Colleges Grid Layout */
+.colleges-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.college-box {
+    background: #ff8800;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.college-box:hover {
+    transform: scale(1.05);
+    background: #cc5500;
+}
+
+/* Pagination Buttons */
+.pagination-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination-controls button {
+    background: #ff8800;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.pagination-controls button:hover {
+    background: #cc5500;
+}
+
+.pagination-controls button:disabled {
+    background: #ffbb77;
+    cursor: not-allowed;
+}
+
+/* Category Buttons */
+.filter-btn {
+    background-color: #ff6200;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #e65c00;
+}
+
+/* College Categories Section */
+.exam-categories {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.exam-categories h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .colleges-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #searchBox {
+        width: 80%;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+}

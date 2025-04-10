@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Law Courses - Edu College</title>
+  <link rel="stylesheet" href="responsive.css">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff5e6;
+  text-align: center;
+}
+
+.back-to-home {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  background-color: #e67e22;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.back-to-home:hover {
+  background-color: #d35400;
+}
+
+header {
+  background-color: #ff6200;
+  color: white;
+  padding: 25px 20px 20px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.courses-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 20px;
+}
+
+.course-box {
+  width: 280px;
+  padding: 20px;
+  background: white;
+  border: 2px solid #e67e22;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.course-box h3 {
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+.course-box:hover {
+  transform: scale(1.05);
+}
+
+.pagination-buttons {
+  margin: 20px;
+}
+
+.pagination-buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-weight: bold;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination-buttons button:disabled {
+  background-color: #f5cba7;
+  cursor: not-allowed;
+}
+
+.pagination-buttons button:hover:enabled {
+  background-color: #d35400;
+}
+
+.cta {
+  background: #fff3e0;
+  padding: 30px 20px;
+  margin-top: 30px;
+}
+
+.cta h2 {
+  color: #e67e22;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  padding: 12px 24px;
+  background: #d35400;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #e67e22;
+}
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="courses.html" class="back-to-home" id="backToHome">Back</a>
+  <h1>Law Courses</h1>
+</header>
+
+<section id="courses-grid" class="courses-grid">
+  <!-- Courses populated via JS -->
+</section>
+
+<div class="pagination-buttons">
+  <button id="prev-course-btn" onclick="prevCoursePage()">Previous</button>
+  <button id="next-course-btn" onclick="nextCoursePage()">Next</button>
+</div>
+
+<section class="cta">
+  <h2>Enter the World of Law & Justice!</h2>
+  <a href="register.html" class="cta-btn">Register Now</a>
+</section>
+
+<script>
+  let coursePage = 0;
+  const coursesPerPage = 4;
+
+  const courses = [
+    { name: "LLB (Bachelor of Laws)", duration: "3 years", fees: "₹10K–2L/year", branches: "Criminal, Civil, Corporate", info: "The primary degree for legal careers, preparing students for legal practice and judiciary services." },
+    { name: "BA LLB", duration: "5 years", fees: "₹25K–3L/year", branches: "Law with Arts subjects", info: "An integrated course combining law and arts subjects, ideal for those entering law right after 12th." },
+    { name: "BBA LLB", duration: "5 years", fees: "₹30K–4L/year", branches: "Business Law, Corporate Law", info: "Blends law with business and management studies for a career in corporate law." },
+    { name: "LLM (Master of Laws)", duration: "1–2 years", fees: "₹50K–3L", branches: "Criminal, Corporate, IP Law", info: "Postgraduate program specializing in advanced areas of law." },
+    { name: "Diploma in Cyber Law", duration: "6 months–1 year", fees: "₹20K–1L", branches: "Internet Law, Cyber Crimes", info: "Designed to cover legal issues surrounding cyberspace, data, and digital crimes." },
+    { name: "Diploma in Labour Law", duration: "1 year", fees: "₹10K–50K", branches: "Industrial Law, Employee Rights", info: "Focuses on employment and labor relations in private and government sectors." },
+    { name: "Diploma in Criminal Law", duration: "1 year", fees: "₹10K–50K", branches: "Criminal Justice", info: "Covers basics of criminal procedure, investigation, and criminal behavior." },
+    { name: "Certificate in Human Rights", duration: "6 months", fees: "₹5K–25K", branches: "Human Rights Law", info: "Ideal for those looking to work in legal NGOs, international rights organizations, and advocacy." }
+  ];
+
+  function showCourses() {
+    const courseContainer = document.getElementById("courses-grid");
+    courseContainer.innerHTML = "";
+
+    let start = coursePage * coursesPerPage;
+    let end = start + coursesPerPage;
+    let displayed = courses.slice(start, end);
+
+    displayed.forEach(course => {
+      const div = document.createElement("div");
+      div.className = "course-box";
+      div.setAttribute("data-info", course.info);
+      div.onclick = function () { speakText(this); };
+      div.innerHTML = `
+        <h3>${course.name}</h3>
+        <p><strong>Duration:</strong> ${course.duration}</p>
+        <p><strong>Branches:</strong> ${course.branches}</p>
+        <p><strong>Fees:</strong> ${course.fees}</p>
+      `;
+      courseContainer.appendChild(div);
+    });
+
+    updateCourseButtons();
+  }
+
+  function nextCoursePage() {
+    if ((coursePage + 1) * coursesPerPage < courses.length) {
+      coursePage++;
+      showCourses();
+    }
+  }
+
+  function prevCoursePage() {
+    if (coursePage > 0) {
+      coursePage--;
+      showCourses();
+    }
+  }
+
+  function updateCourseButtons() {
+    document.getElementById("prev-course-btn").disabled = coursePage === 0;
+    document.getElementById("next-course-btn").disabled = (coursePage + 1) * coursesPerPage >= courses.length;
+  }
+
+  function speakText(element) {
+    const text = element.getAttribute("data-info");
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.lang = "en-US";
+    speech.rate = 1;
+    speechSynthesis.speak(speech);
+  }
+
+  document.addEventListener("DOMContentLoaded", showCourses);
+  document.getElementById("backToHome").addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.href = "courses.html";
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: #fff5e6; /* Light orange background */
+    margin: 0; 
+    padding: 0; 
+    text-align: center; 
+}
+
+/* Header */
+header { 
+    background-color: #ff6200; /* Orange theme */
+    color: white; 
+    padding: 20px; 
+}
+
+/* Search Box */
+#searchBox { 
+    width: 60%; 
+    padding: 10px; 
+    margin-top: 10px; 
+    border: none; 
+    border-radius: 5px; 
+}
+
+/* Exam Categories */
+.exam-categories { 
+    margin: 20px 0; 
+}
+
+/* Filter Buttons */
+.filter-btn { 
+    background-color: #ff6200; /* Orange theme */
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    margin: 5px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background 0.3s ease;
+}
+
+.filter-btn:hover { 
+    background-color: #e65c00; /* Darker orange */
+}
+
+/* Exam List */
+#examList { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 20px; 
+}
+
+/* Exam Card */
+.exam-card { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 300px; 
+    transition: transform 0.3s ease; 
+}
+
+.exam-card:hover { 
+    transform: translateY(-5px); 
+}
+
+/* Details Button */
+.details-btn { 
+    background-color: #ff8000; /* Orange button */
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    margin-top: 10px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background 0.3s ease;
+}
+
+.details-btn:hover { 
+    background-color: #e65c00; /* Darker orange */
+}
+
+/* Back to Home Button */
+.back-to-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: #ff6200; /* Orange theme */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.back-to-home:hover {
+    background-color: #e65c00; /* Darker orange */
+}

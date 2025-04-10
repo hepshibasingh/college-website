@@ -1,0 +1,112 @@
+/* General Styles */ 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff3e0; /* Light orange background */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff6600; /* Orange header */
+    color: white;
+    padding: 15px 20px;
+    position: relative;
+}
+
+/* Contact Us Title (Centered) */
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Back to Home Button (Top-Left Corner) */
+.back-home {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #dd4f0d; 
+    color: black;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.back-home:hover {
+    background-color: #fc9769;
+}
+
+/* Contact Section */
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+/* Contact Info & Form Box */
+.contact-info, .contact-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    border-left: 5px solid #ff6600; /* Orange left border */
+}
+
+/* Form Inputs */
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Submit Button */
+.contact-form form button {
+    background-color: #ff6600; /* Orange button */
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form form button:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-media a {
+    font-size: 24px;
+    color: #ff6600; /* Orange theme */
+    text-decoration: none;
+    transition: transform 0.2s, color 0.3s;
+}
+
+.social-media a:hover {
+    transform: scale(1.2);
+    color: #cc4400; /* Darker orange on hover */
+}
