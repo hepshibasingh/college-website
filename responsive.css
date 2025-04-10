@@ -1,7 +1,6 @@
-/* ---------- MOBILE FIXES ---------- */
 @media screen and (max-width: 768px) {
 
-  /* Hero Section */
+  /* Hero section */
   .hero {
     padding: 20px 10px;
     text-align: center;
@@ -9,84 +8,38 @@
 
   .hero h2, .hero p {
     font-size: 16px;
-    padding: 0 10px;
   }
 
   .hero button {
-    width: 80%;
+    width: 90%;
     font-size: 16px;
     margin-top: 10px;
-    padding: 12px;
   }
 
-  /* Feature Blocks */
+  /* Feature hoverboard blocks */
   .features {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    padding: 20px 10px;
+    gap: 20px;
   }
 
   .hoverboard-box {
     width: 100%;
-    box-sizing: border-box;
+    padding: 15px;
+    margin: 0 auto;
   }
 
   .feature-box {
     text-align: center;
-    padding: 15px;
   }
 
   .image-container img {
     width: 100%;
     height: auto;
-    display: block;
-    margin-top: 10px;
-    border-radius: 6px;
+    border-radius: 10px;
   }
 
-  /* Registration Section */
-  .register-section {
-    text-align: center;
-    padding: 20px 10px;
-  }
-
-  .register-section h2 {
-    font-size: 18px;
-  }
-
-  .register-section p {
-    font-size: 14px;
-  }
-
-  .register-button {
-    width: 90%;
-    padding: 12px;
-    font-size: 16px;
-  }
-
-  /* Course Preview */
-  .course-preview {
-    padding: 20px 10px;
-    text-align: center;
-  }
-
-  .course-card {
-    width: 90%;
-    margin: 10px auto;
-    padding: 12px;
-    border-radius: 8px;
-  }
-
-  .course-card h3 {
-    font-size: 16px;
-  }
-
-  .course-card p {
-    font-size: 14px;
-  }
-
-  /* College Section */
+  /* Top colleges section */
   .college-list {
     display: block;
     padding: 10px;
@@ -96,59 +49,40 @@
     width: 90%;
     margin: 10px auto;
     padding: 15px;
-    background: #fff;
+    background: #fff8ed;
     border-radius: 8px;
     border: 1px solid #eee;
-  }
-
-  .college-card h3 {
-    font-size: 18px;
-  }
-
-  .college-card p {
-    font-size: 14px;
-  }
-
-  /* Exams */
-  .exam-preview {
-    display: block;
-    padding: 10px;
-  }
-
-  .exam-item {
-    padding: 15px;
-    background: #fff3e0;
-    margin: 10px 0;
-    border-radius: 8px;
     text-align: center;
   }
 
-  .exam-item h3 {
-    font-size: 16px;
-  }
-
-  .exam-item p {
-    font-size: 14px;
-  }
-
-  /* Contact Section */
-  .homepage-contact {
+  /* Registration section */
+  .register-section, .course-preview, .homepage-contact {
     padding: 20px 10px;
     text-align: center;
   }
 
-  .homepage-contact p, .contact-details p {
-    font-size: 14px;
+  .register-button, .view-more, .contact-btn {
+    width: 90%;
+    margin: 10px auto;
+    padding: 12px;
+    font-size: 16px;
   }
 
-  .social-links a {
-    font-size: 14px;
-    margin: 5px;
-    display: inline-block;
+  /* Course & college cards */
+  .course-card, .course-box {
+    width: 90%;
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 10px;
+    background: #fff;
   }
-}
-@media screen and (max-width: 768px) {
-  body {
-    background-color: #fce4ec !important;
+
+  .exam-item {
+    padding: 15px;
+    margin: 10px auto;
+    background: #fff3e0;
+    border-radius: 10px;
+    text-align: center;
   }
+
 }
