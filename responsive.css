@@ -1,88 +1,189 @@
+/* -----------------------------------
+   MOBILE FIXES FOR ALL PAGES
+------------------------------------ */
 @media screen and (max-width: 768px) {
 
-  /* Hero section */
-  .hero {
-    padding: 20px 10px;
-    text-align: center;
+  /* HEADER FIX */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px;
+    position: relative;
   }
 
-  .hero h2, .hero p {
-    font-size: 16px;
+  header h1 {
+    font-size: 20px;
+    margin: 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .back-to-home {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 14px;
+    padding: 8px 12px;
+    background-color: #e67e22;
+    color: white;
+    border-radius: 5px;
+    z-index: 10;
+  }
+
+  /* HERO SECTION - HOMEPAGE */
+  .hero {
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 14px;
+    margin-bottom: 10px;
   }
 
   .hero button {
-    width: 90%;
     font-size: 16px;
-    margin-top: 10px;
+    padding: 12px;
+    width: 90%;
+    background-color: #ff6200;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
   }
 
-  /* Feature hoverboard blocks */
+  /* FEATURE BLOCKS (Search, Register, Compare) */
   .features {
-    display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+    padding: 10px;
   }
 
   .hoverboard-box {
     width: 100%;
-    padding: 15px;
     margin: 0 auto;
   }
 
-  .feature-box {
-    text-align: center;
-  }
-
-  .image-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-
-  /* Top colleges section */
+  /* COLLEGE CARDS */
   .college-list {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     padding: 10px;
   }
 
   .college-card {
-    width: 90%;
-    margin: 10px auto;
-    padding: 15px;
+    width: 100%;
     background: #fff8ed;
-    border-radius: 8px;
-    border: 1px solid #eee;
+    padding: 15px;
+    border: 1px solid #f5cba7;
+    border-radius: 10px;
     text-align: center;
   }
 
-  /* Registration section */
-  .register-section, .course-preview, .homepage-contact {
-    padding: 20px 10px;
-    text-align: center;
-  }
-
-  .register-button, .view-more, .contact-btn {
-    width: 90%;
-    margin: 10px auto;
-    padding: 12px;
+  .college-card h3 {
     font-size: 16px;
+    color: #e67e22;
   }
 
-  /* Course & college cards */
+  .college-card p {
+    font-size: 14px;
+    color: #444;
+  }
+
+  /* COLLEGE FILTER BUTTONS */
+  .exam-categories,
+  .course-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .filter-btn {
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    background-color: #f0932b;
+    color: white;
+    border: none;
+  }
+
+  /* BACK BUTTON POSITIONING FOR ALL PAGES */
+  .back-to-home {
+    font-size: 14px;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+  }
+
+  /* COURSE CARDS */
   .course-card, .course-box {
     width: 90%;
     margin: 10px auto;
-    padding: 12px;
+    padding: 15px;
+    border: 1px solid #eee;
     border-radius: 10px;
-    background: #fff;
   }
 
+  .course-box h3, .course-card h3 {
+    font-size: 16px;
+  }
+
+  .course-box p, .course-card p {
+    font-size: 14px;
+  }
+
+  /* BUTTONS & SPACING */
+  .register-button,
+  .view-more,
+  .cta-btn,
+  .contact-btn {
+    width: 90%;
+    margin: 12px auto;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  /* UPCOMING EXAMS */
   .exam-item {
     padding: 15px;
-    margin: 10px auto;
+    margin: 10px;
+    border-radius: 8px;
     background: #fff3e0;
-    border-radius: 10px;
     text-align: center;
   }
 
+  .exam-item h3 a {
+    font-size: 16px;
+    color: #e67e22;
+  }
+
+  .exam-item p {
+    font-size: 14px;
+  }
+
+  /* CONTACT SECTION */
+  .homepage-contact {
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .homepage-contact p {
+    font-size: 14px;
+  }
+
+  .social-links a {
+    font-size: 14px;
+    margin: 5px 10px;
+    display: inline-block;
+    color: #e67e22;
+  }
 }
