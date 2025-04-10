@@ -1,12 +1,13 @@
-@media (max-width: 768px) {
-  /* Hero Section Fix */
+/* ---------- MOBILE FIXES ---------- */
+@media screen and (max-width: 768px) {
+
+  /* Hero Section */
   .hero {
-    padding: 10px;
+    padding: 20px 10px;
     text-align: center;
   }
 
-  .hero h2,
-  .hero p {
+  .hero h2, .hero p {
     font-size: 16px;
     padding: 0 10px;
   }
@@ -14,36 +15,78 @@
   .hero button {
     width: 80%;
     font-size: 16px;
-    margin: 10px auto;
-    display: block;
+    margin-top: 10px;
+    padding: 12px;
   }
 
-  /* Feature Cards below "Explore Now" */
+  /* Feature Blocks */
   .features {
-    display: block;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
   }
 
   .hoverboard-box {
-    width: 90%;
-    margin: 10px auto;
-    display: block;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    border-radius: 10px;
-    background: #fff;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .feature-box {
-    padding: 10px;
+    text-align: center;
+    padding: 15px;
   }
 
   .image-container img {
     width: 100%;
     height: auto;
+    display: block;
+    margin-top: 10px;
     border-radius: 6px;
   }
 
-  /* Top Colleges section */
+  /* Registration Section */
+  .register-section {
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .register-section h2 {
+    font-size: 18px;
+  }
+
+  .register-section p {
+    font-size: 14px;
+  }
+
+  .register-button {
+    width: 90%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  /* Course Preview */
+  .course-preview {
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .course-card {
+    width: 90%;
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .course-card h3 {
+    font-size: 16px;
+  }
+
+  .course-card p {
+    font-size: 14px;
+  }
+
+  /* College Section */
   .college-list {
     display: block;
     padding: 10px;
@@ -52,97 +95,55 @@
   .college-card {
     width: 90%;
     margin: 10px auto;
-    padding: 12px;
-    border: 1px solid #f0932b;
+    padding: 15px;
+    background: #fff;
     border-radius: 8px;
-    background: #fff8ed;
+    border: 1px solid #eee;
   }
 
   .college-card h3 {
     font-size: 18px;
-    color: #e67e22;
   }
 
   .college-card p {
     font-size: 14px;
-    color: #444;
-  }
-}
-/* Styles for devices with a maximum width of 768px (e.g., tablets and mobile phones) */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
   }
 
-  header {
+  /* Exams */
+  .exam-preview {
+    display: block;
     padding: 10px;
+  }
+
+  .exam-item {
+    padding: 15px;
+    background: #fff3e0;
+    margin: 10px 0;
+    border-radius: 8px;
     text-align: center;
   }
 
-  nav ul {
-    flex-direction: column;
-    padding: 0;
+  .exam-item h3 {
+    font-size: 16px;
   }
 
-  .content {
-    padding: 10px;
-  }
-
-  .menu-icon {
-    display: block;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-  }
-
-  .course-box,
-  .college-card,
-  .course-card {
-    width: 90% !important;
-    margin: 10px auto;
+  .exam-item p {
     font-size: 14px;
   }
 
-  .filter-btn {
+  /* Contact Section */
+  .homepage-contact {
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .homepage-contact p, .contact-details p {
     font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  button,
-  .register-button,
-  .view-more,
-  .cta-btn {
-    width: 90%;
-    font-size: 16px;
-    margin: 10px auto;
-  }
-
-  .hero p,
-  .hero h2 {
-    font-size: 16px;
-    padding: 0 10px;
-  }
-
-  .course-list,
-  .college-list,
-  .courses-grid {
-    display: block;
-    padding: 10px;
   }
 
   .social-links a {
+    font-size: 14px;
+    margin: 5px;
     display: inline-block;
-    margin: 6px;
-    font-size: 14px;
   }
-
-  .homepage-contact p {
-    font-size: 14px;
-  }
-}
-/* Base styles for all devices */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
 }
