@@ -1,4 +1,73 @@
+@media (max-width: 768px) {
+  /* Hero Section Fix */
+  .hero {
+    padding: 10px;
+    text-align: center;
+  }
 
+  .hero h2,
+  .hero p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .hero button {
+    width: 80%;
+    font-size: 16px;
+    margin: 10px auto;
+    display: block;
+  }
+
+  /* Feature Cards below "Explore Now" */
+  .features {
+    display: block;
+    padding: 10px;
+  }
+
+  .hoverboard-box {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    background: #fff;
+  }
+
+  .feature-box {
+    padding: 10px;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  /* Top Colleges section */
+  .college-list {
+    display: block;
+    padding: 10px;
+  }
+
+  .college-card {
+    width: 90%;
+    margin: 10px auto;
+    padding: 12px;
+    border: 1px solid #f0932b;
+    border-radius: 8px;
+    background: #fff8ed;
+  }
+
+  .college-card h3 {
+    font-size: 18px;
+    color: #e67e22;
+  }
+
+  .college-card p {
+    font-size: 14px;
+    color: #444;
+  }
+}
 /* Styles for devices with a maximum width of 768px (e.g., tablets and mobile phones) */
 @media (max-width: 768px) {
   body {
